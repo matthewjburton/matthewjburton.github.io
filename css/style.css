@@ -5,8 +5,10 @@ body {
 
 #name {
     text-align: center;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
 #role {
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
