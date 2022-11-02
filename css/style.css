@@ -1,20 +1,13 @@
-@media (prefers-color-scheme: dark) {
-    .dark-scheme {
-      background: #333;
-      color: white;
-    }
-}
+@import url('https://fonts.googleapis.com/css?family=Abel=swap');
 
-@media (prefers-color-scheme: light) {
-    .light-scheme {
-        background: white;
-        color: #555;
-    }
+body {
+    background: #333;
+    color: white;
 }
 
 #name {
     text-align: center;
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: Abel, Tahoma, sans-serif;
 }
 
 #role {
