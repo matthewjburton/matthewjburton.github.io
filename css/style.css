@@ -1,6 +1,15 @@
-body {
-    background-color: #121212;
-    color: #ffffff;
+@media (prefers-color-scheme: dark) {
+    .dark-scheme {
+      background: #333;
+      color: white;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .light-scheme {
+        background: white;
+        color: #555;
+    }
 }
 
 #name {
