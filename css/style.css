@@ -35,12 +35,21 @@ nav a:hover {
 
 /* #endregion */
 
-/* #region top of homepage */
+footer {
+    background-color: #e7e7e7;
+    color: #333;
+    margin-top: 3vw;
+    padding: 1vw 2vw 2vw 2vw; 
+    text-align: center;
+}
+
+/* #region HOME page: name and roles */
 #landing {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 2vw;
 }
 
 #name {
@@ -57,96 +66,46 @@ nav a:hover {
 
 /* #endregion */
 
-/* #region row-left */
-.row-left {
-    clear: left;
-    margin-left: 20%;
-    margin-bottom: 100px;
-}
-
-.row-left img {
-    width: 300px;
-    height: 300px;
-    border-radius: 5%;
-    float: left;
-    margin-right: 2%;
-    overflow: hidden;
-}
-
-.row-left h2 {
-    display: inline-block;
-    font-family: abel-regular, Tahoma, sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    vertical-align: top;
-}
-
-.row-left p {
-    font-family: Geneva;
-    margin-right: 20%;
-    vertical-align: middle;
-}
-
-/* #endregion */
-
-/* #region row-right */
-.row-right {
-    clear: right;
-    margin-right: 20%;
-    margin-bottom: 100px;
-}
-
-.row-right img {
-    width: 300px;
-    height: 300px;
-    border-radius: 5%;
-    float: right;
-    margin-left: 2%;
-    overflow: hidden;
-}
-
-.row-right h2 {
-    display: inline-block;
-    font-family: abel-regular, Tahoma, sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    margin-left: 20%;
-    vertical-align: top;
-}
-
-.row-right p {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 20%;
-    margin-right: 5%;
-    vertical-align: middle;
-}
-
-/* #endregion */
-
+/* #region HOME page: text and image containers */
 .container {
     display: flex;
     align-items: center;
+    clear: both;
     margin-left: 20%;
     margin-right: 20%;
+    margin-bottom: 2vw;
 }
 
-.container img{
-    height: 250px;
-    width: 250px;
+.container img {
+    height: 200px;
+    width: 200px;
     object-fit: cover;
     border-radius: 5%;
+    float: right;
 }
 
-.container.left h2 {
+.container .text-container {
     display: inline-block;
-    font-family: abel-regular, Tahoma, sans-serif;
+}
+
+.container .text-container.right {
+    margin-left: 2vw;
+}
+
+.container .text-container.left {
+    margin-right: 2vw;
+}
+
+.text-container h2 {
+    font-family: Verdana, Arial, sans-serif;
     font-size: 25px;
     font-weight: bold;
     vertical-align: top;
 }
 
-.container.left p {
+.text-container p {
     font-family: Geneva;
-    margin-right: 20%;
     vertical-align: middle;
 }
+
+/* #endregion */
