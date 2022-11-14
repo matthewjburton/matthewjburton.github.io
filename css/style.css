@@ -3,12 +3,23 @@
     src: url('../fonts/Abel-Regular.ttf');
 }
 
+@keyframes background-pan{
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
 body {
-    background: rgb(10,10,10);
+    background: rgb(10, 10, 10);
     color: white;
     height: 100vh;
     margin: 0px;
 }
+
 
 /* #region nav */
 nav {
@@ -31,8 +42,18 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(200, 200, 200);
-    text-decoration: underline;
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        #3CB9FC,
+        #B537F2,
+        #8A2BE2,
+        #3CB9FC
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
 
 nav .dropdown-content {
@@ -72,16 +93,54 @@ nav .dropdown:hover .dropdown-content {display: block;}
 /* #region footer */
 footer {
     background-color: rgb(20, 20, 20);
-    color: white;
+    color: White;
     margin-top: 3vh;
     padding: 2vh 2vw;
     text-align: center;
 }
+
+footer #copyright {
+    color: Grey;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+footer .connect {
+    display: flex;
+    justify-content: center;
+}
+
+footer .connect a {
+    color: white;
+    padding: 0vh 0.5vw;
+    text-decoration: none;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+footer .connect i {
+    color: white;
+}
+
+footer .connect a:hover {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        #3CB9FC,
+        #B537F2,
+        #8A2BE2,
+        #3CB9FC
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
 /* #endregion */
 
-/* #region name and adjectives*/
-#wrapper {
+/* #region header*/
+#header {
     margin-bottom: 20vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #name {
@@ -107,12 +166,19 @@ footer {
     right: 0;
     text-align: center;
     text-transform: uppercase;
-    top: 200px;
-}
-  
-.rotatingText-adjective {
     animation-duration: 1.5s;
 }
+
+@media (min-width: 568px) {
+    .rotatingText-adjective {
+        top: 200px;
+    } 
+}
+
+@media (max-width: 568px) {
+    .rotatingText-adjective {
+        top: 300px;
+    } }
 
 .rotatingText-adjective:nth-of-type(1) {
     animation-name: rotate;
