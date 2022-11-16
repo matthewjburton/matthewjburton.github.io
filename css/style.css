@@ -36,14 +36,6 @@ html {
     font-size: 20px;
     font-family: roboto-regular, sans-serif;
 }
-  
-@media (max-width: 900px) {
-    html { font-size: 16px; }
-}
-  
-@media (max-width: 400px) {
-    html { font-size: 12px; }
-}
 
 body {
     background: var(--background);
@@ -90,6 +82,7 @@ a:hover {
 
 .dropdown-content {
     display: none;
+    font-size: 16px;
     position: absolute;
     background-color: var(--lighter-background);
     min-width: 3vw;
@@ -121,6 +114,7 @@ a:hover {
 footer {
     background-color: var(--lighter-background);
     color: var(--primary-text);
+    font-size: 16px;
     margin-top: 6vh;
     padding: 2vh 2vw;
     text-align: center;
@@ -143,7 +137,7 @@ footer #copyright {
 
 #connect img {
     aspect-ratio: 1;
-    width: 30px;
+    width: 28px;
     margin-right: -6px;
     padding-top: 2px;
 }
