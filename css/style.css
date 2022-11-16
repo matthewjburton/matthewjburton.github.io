@@ -1,6 +1,23 @@
+:root {
+    --background: #121212;
+    --lighter-background: #181818;
+    --dropdown-hover: #404040;
+    --primary-text: #FFFFFF;
+    --secondary-text: #B3B3B3;
+
+    --gradient-blue: #3CB9FC;
+    --gradient-pink: #B537F2;
+    --gradient-purple: #8A2BE2;
+}
+
 @font-face {
     font-family: abel-regular;
     src: url('../fonts/Abel-Regular.ttf');
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
 }
 
 @keyframes background-pan{
@@ -13,13 +30,27 @@
     }
 }
 
+
+
+html {
+    font-size: 20px;
+    font-family: roboto-regular, sans-serif;
+}
+  
+@media (max-width: 900px) {
+    html { font-size: 16px; }
+}
+  
+@media (max-width: 400px) {
+    html { font-size: 12px; }
+}
+
 body {
-    background: rgb(10, 10, 10);
-    color: white;
+    background: var(--background);
+    color: var(--primary-text);
     height: 100vh;
     margin: 0px;
 }
-
 
 /* #region nav */
 nav {
@@ -34,21 +65,21 @@ nav img {
     width: 50px;
 }
 
-nav a {
-    font-family: Verdana, Arial, sans-serif;
+a {
     padding: 0 1vw;
-    color: white;
+    color: var(--primary-text);
     text-decoration: none;
+    text-transform: uppercase;
 }
 
-nav a:hover {
+a:hover {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
-        #3CB9FC,
-        #B537F2,
-        #8A2BE2,
-        #3CB9FC
+        var(--gradient-blue),
+        var(--gradient-pink),
+        var(--gradient-purple),
+        var(--gradient-blue)
     );
     background-size: 200%;
     -webkit-background-clip: text;
@@ -56,108 +87,88 @@ nav a:hover {
     white-space: nowrap;
 }
 
-nav .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(20, 20, 20);
-    min-width: 5vw;
+    background-color: var(--lighter-background);
+    min-width: 3vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
-nav .dropdown-content a {
-    color: white;
+.dropdown-content a {
+    color: var(--primary-text);
     padding: 0.1vh 1vw;
     text-decoration: none;
+    text-transform: none;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-nav .dropdown-content i {
-    color: white;
-    padding: 2vh 8px;
+.dropdown-content i {
+    color: var(--primary-text);
+    padding: 2vh 8px 2vh 0px;
 }
 
-nav .dropdown-content p {
-    color: white;
-    padding: 0 8px;
-}
+.dropdown-content a:hover {background-color: var(--dropdown-hover)}
 
-nav .dropdown-content a:hover {background-color: rgb(30, 30, 30)}
-
-nav .dropdown:hover .dropdown-content {display: block;}
-  
+.dropdown:hover .dropdown-content {display: block;}
 /* #endregion */
 
 /* #region footer */
 footer {
-    background-color: rgb(20, 20, 20);
-    color: White;
-    margin-top: 3vh;
+    background-color: var(--lighter-background);
+    color: var(--primary-text);
+    margin-top: 5vh;
     padding: 2vh 2vw;
     text-align: center;
 }
 
 footer #copyright {
-    color: Grey;
-    font-family: Verdana, Arial, sans-serif;
+    color: var(--secondary-text);
 }
 
-footer .connect {
+#connect {
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-footer .connect a {
-    color: white;
+#connect a {
     padding: 0vh 0.5vw;
-    text-decoration: none;
-    font-family: Verdana, Arial, sans-serif;
 }
 
-footer .connect i {
-    color: white;
-}
-
-footer .connect a:hover {
-    animation: background-pan 3s linear infinite;
-    background: linear-gradient(
-        to right,
-        #3CB9FC,
-        #B537F2,
-        #8A2BE2,
-        #3CB9FC
-    );
-    background-size: 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
+#connect img {
+    aspect-ratio: 1;
+    width: 30px;
+    margin-right: -6px;
+    padding-top: 2px;
 }
 /* #endregion */
 
 /* #region header*/
 #header {
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     display: flex;
     flex-direction: column;
 }
 
-#name {
+#name{
     text-align: center;
     font-size: 80px;
-    font-family: abel-regular, Tahoma, sans-serif;
+    font-family: abel-regular, sans-serif;
 }
 
 .rotatingText {
     text-align: center;
-  }
+}
   
 .rotatingText-adjective {
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
-    font-family: abel-regular, Tahoma, sans-serif;
+    font-family: abel-regular, sans-serif;
     left: 0;
     margin-bottom: 0;
     margin-top: 50px;
@@ -178,7 +189,8 @@ footer .connect a:hover {
 @media (max-width: 568px) {
     .rotatingText-adjective {
         top: 300px;
-    } }
+    } 
+}
 
 .rotatingText-adjective:nth-of-type(1) {
     animation-name: rotate;
@@ -191,13 +203,8 @@ footer .connect a:hover {
 }
   
 .rotatingText-adjective:nth-of-type(3) {
-    animation-name: rotate;
-    animation-delay: 3s;
-}
-  
-.rotatingText-adjective:nth-of-type(4) {
     animation-name: rotate-last;
-    animation-delay: 4.25s;
+    animation-delay: 3s;
     animation-fill-mode: forwards;
 }
   
@@ -205,7 +212,7 @@ footer .connect a:hover {
     0% {
         opacity: 0;
         transform: translate3d(50px, 0, 0);
-}
+    }
     
     20%, 80% {
         opacity: 1;
@@ -216,7 +223,7 @@ footer .connect a:hover {
         opacity: 0;
         transform: translate3d(-50px, 0, 0);
     }
-  }
+}
   
 @keyframes rotate-last {
     0% {
@@ -263,14 +270,13 @@ footer .connect a:hover {
 }
 
 .text-container h2 {
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
     vertical-align: top;
+    padding-top: 4px;
 }
 
 .text-container p {
-    font-family: Geneva;
     vertical-align: middle;
 }
 
