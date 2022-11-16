@@ -35,8 +35,8 @@ html {
     font-family: roboto-regular, sans-serif;
 }
 
-#wip {
-    background-color: rgb(170, 0, 0);
+#wip { /* remove once website is complete*/
+    background-color: rgb(180, 20, 20);
     color: var(--primary-text);
     text-align: center;
     padding: 0.002vh 0vw;
@@ -186,13 +186,17 @@ footer #copyright {
 
 @media (min-width: 568px) {
     .rotatingText-adjective {
-        top: 220px;
+        /* for use once the WIP banner is removed
+        top: 220px;*/
+        top: 270px;
     } 
 }
 
 @media (max-width: 568px) {
     .rotatingText-adjective {
-        top: 320px;
+        /* for use once the WIP banner is removed
+        top: 320px;*/
+        top: 370px;
     } 
 }
 
