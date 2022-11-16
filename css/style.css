@@ -30,11 +30,16 @@
     }
 }
 
-
-
 html {
     font-size: 20px;
     font-family: roboto-regular, sans-serif;
+}
+
+#wip {
+    background-color: rgb(170, 0, 0);
+    color: var(--primary-text);
+    text-align: center;
+    padding: 0.002vh 0vw;
 }
 
 body {
@@ -153,6 +158,7 @@ footer #copyright {
 
 #name{
     text-align: center;
+    text-transform: uppercase;
     font-size: 80px;
     font-family: abel-regular, sans-serif;
 }
@@ -238,6 +244,7 @@ footer #copyright {
 /* #endregion */
 
 /* #region text and image containers */
+
 .container {
     display: flex;
     align-items: center;
@@ -293,3 +300,12 @@ footer #copyright {
 }*/
 
 /* #endregion */
+
+/* #region other pages */
+h1.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: abel-regular, sans-serif;
+}
+/*  #endregion */
