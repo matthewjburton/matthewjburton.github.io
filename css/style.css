@@ -4,6 +4,7 @@
     --dropdown-hover: #404040;
     --primary-text: #FFFFFF;
     --secondary-text:rgb(222, 222, 222);
+    --tertiary-text:rgb(190, 190, 190);
 
     --gradient-blue: #3CB9FC;
     --gradient-pink: #B537F2;
@@ -63,14 +64,14 @@ nav img {
     width: 50px;
 }
 
-a {
+nav a {
     padding: 0 1vw;
     color: var(--primary-text);
     text-decoration: none;
     text-transform: uppercase;
 }
 
-a:hover {
+nav a:hover {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
@@ -150,10 +151,10 @@ footer #copyright {
 
 /* #region header*/
 #header {
-    margin-top: 4vh;
-    margin-bottom: 10vh;
-    display: flex;
-    flex-direction: column;
+    margin-top: 2vh;
+    margin-bottom: 12vh;
+    /*display: flex;
+    flex-direction: column;*/
 }
 
 #name{
@@ -259,8 +260,8 @@ footer #copyright {
 }
 
 .container img {
-    height: 200px;
-    width: 200px;
+    aspect-ratio: 1;
+    width: 19vw;
     object-fit: cover;
     border-radius: 2vmin;
     float: right;
@@ -311,5 +312,23 @@ h1.title {
     text-transform: uppercase;
     font-size: 80px;
     font-family: abel-regular, sans-serif;
+}
+
+p a {
+    color: rgb(200, 229, 255);
+}
+
+.text-container h3 {
+    font-size: 18px;
+    vertical-align: top;
+    color: var(--tertiary-text);
+}
+
+.skills {
+    display: flex;
+}
+
+.skills .section {
+    padding-left: 5vw;
 }
 /*  #endregion */
