@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <link rel="icon" type="image/x-icon" href="../images/white-favicon.png">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/b3382d9189.js" crossorigin="anonymous"></script>
     <!--<script> src="../Observer.js"</script>-->
@@ -11,10 +11,28 @@
 
         <nav>
             <a href="index.html">
-                <img src="../images/white-favicon.png"  alt="Logo">
+                <picture>
+                    <source srcset="../images/white-favicon.png"  alt="Logo" media="(prefers-color-scheme: dark)">
+                    <img src="../images/black-favicon.png"  alt="Logo">
+                </picture>
             </a>
             <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
+            <div class="dropdown"><a href="about.html">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html#anchor-bio">
+                        <i class="fa-solid fa-user"></i>
+                        Bio
+                    </a>
+                    <a href="about.html#anchor-education">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Education
+                    </a>
+                    <a href="about.html#anchor-skills">
+                        <i class="fa-solid fa-wrench"></i>
+                        Skills
+                    </a>
+                </div>
+            </div>
             <div class="dropdown"><a href="">Connect</a>
                 <div class="dropdown-content">
                     <a href="mailto:mattjburton64@gmail.com">
@@ -79,7 +97,10 @@
         <nav>
             <div id="connect">
                 <a href="index.html">
-                    <img src="../images/white-favicon.png" alt="Logo">
+                    <picture>
+                        <source srcset="../images/white-favicon.png"  alt="Logo" media="(prefers-color-scheme: dark)">
+                        <img src="../images/black-favicon.png"  alt="Logo">
+                    </picture>
                 </a>
                 <a href="mailto:mattjburton64@gmail.com">
                     <i class="fa-solid fa-envelope"></i>

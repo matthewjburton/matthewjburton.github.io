@@ -11,10 +11,28 @@
 
         <nav>
             <a href="index.html">
-                <img src="../images/white-favicon.png"  alt="Logo">
+                <picture>
+                    <source srcset="../images/white-favicon.png"  alt="Logo" media="(prefers-color-scheme: dark)">
+                    <img src="../images/black-favicon.png"  alt="Logo">
+                </picture>
             </a>
             <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
+            <div class="dropdown"><a href="about.html">About</a>
+                <div class="dropdown-content">
+                    <a href="about.html#anchor-bio">
+                        <i class="fa-solid fa-user"></i>
+                        Bio
+                    </a>
+                    <a href="about.html#anchor-education">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Education
+                    </a>
+                    <a href="about.html#anchor-skills">
+                        <i class="fa-solid fa-wrench"></i>
+                        Skills
+                    </a>
+                </div>
+            </div>
             <div class="dropdown"><a href="">Connect</a>
                 <div class="dropdown-content">
                     <a href="mailto:mattjburton64@gmail.com">
@@ -41,7 +59,7 @@
             <h1 class="title">About</h1>
         </div>
 
-        <div class="container">
+        <div class="container" id="anchor-bio">
             <img src="../images/bio.jpeg" alt="Matthew Burton">
             <div class="text-container right">
                 <h2>Bio</h2>
@@ -49,7 +67,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" id="anchor-education">
             <div class="text-container">
                 <h2>Education</h2>
                 <h3>B.S. in Computer Science; Concentration in Cyber Security</h3>
@@ -58,14 +76,13 @@
         </div>
 
 
-        <div class="container">
+        <div class="container" id="anchor-skills">
             <div class="text-container">
                 <h2>Skills</h2>
                 <div class="skills">
                     <div>
-                        <h3>Languages</h3>
-                        <p><i class="fa-solid fa-check-double"></i> Python</p>
-                        <p><i class="fa-solid fa-check-double"></i> C#</p>
+                        <h3>Programming</h3>
+                        <p><i class="fa-solid fa-check"></i> Python</p>
                         <p><i class="fa-solid fa-check"></i> C++</p>
                         <p><i class="fa-solid fa-check"></i> Java</p>
                         <p><i class="fa-solid fa-check"></i> HTML</p>
@@ -73,21 +90,26 @@
                         <p><i class="fa-solid fa-check"></i> MySQL</p>
                     </div>
                     <div class="section">
-                        <h3>Software</h3>
-                        <p><i class="fa-solid fa-check-double"></i> Unity</p>
-                        <p><i class="fa-solid fa-check"></i> Visual Studio Code</p>
-                        <p><i class="fa-solid fa-check"></i> GitHub</p>
-                        <p><i class="fa-solid fa-check"></i> AndroidStudio</p>
-                        <p><i class="fa-solid fa-check"></i> XCode</p>
+                        <h3>Game Dvelopement</h3>
+                        <p><i class="fa-solid fa-check"></i> Unity</p>
+                        <p><i class="fa-solid fa-check"></i> C#</p>
+                        <p><i class="fa-solid fa-check"></i> Aseprite</p>
+                        <p><i class="fa-solid fa-check"></i> Xcode</p>
                     </div>
                     <div class="section">
-                        <h3>Adobe Suite</h3>
-                        <p><i class="fa-solid fa-check-double"></i> Illustrator</p>
-                        <p><i class="fa-solid fa-check-double"></i> Photoshop</p>
-                        <p><i class="fa-solid fa-check"></i> Lightroom</p>
-                        <p><i class="fa-solid fa-check"></i> Premier Pro</p>
-                        <p><i class="fa-solid fa-check"></i> After Effects</p>
-                        <p><i class="fa-solid fa-check"></i> Audition</p>
+                        <h3>Graphic Design</h3>
+                        <p><i class="fa-solid fa-check"></i> Adobe Illustrator</p>
+                        <p><i class="fa-solid fa-check"></i> Adobe Photoshop</p>
+                        <p><i class="fa-solid fa-check"></i> Adobe Lightroom</p>
+                        <p><i class="fa-solid fa-check"></i> Adobe Premier</p>
+                        <p><i class="fa-solid fa-check"></i> Adobe After Effects</p>
+                    </div>
+                    <div class="section">
+                        <h3>Extras</h3>
+                        <p><i class="fa-solid fa-check"></i> GitHub</p>
+                        <p><i class="fa-solid fa-check"></i> Visual Studio Code</p>
+                        <p><i class="fa-solid fa-check"></i> Microsoft Excel</p>
+                        <p><i class="fa-solid fa-check"></i> Adobe Audition</p>
                     </div>
                 </div>
             </div>
@@ -98,7 +120,10 @@
         <nav>
             <div id="connect">
                 <a href="index.html">
-                    <img src="../images/white-favicon.png" alt="Logo">
+                    <picture>
+                        <source srcset="../images/white-favicon.png"  alt="Logo" media="(prefers-color-scheme: dark)">
+                        <img src="../images/black-favicon.png"  alt="Logo">
+                    </picture>
                 </a>
                 <a href="mailto:mattjburton64@gmail.com">
                     <i class="fa-solid fa-envelope"></i>

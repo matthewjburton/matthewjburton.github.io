@@ -1,14 +1,38 @@
-:root {
-    --background: #121212;
-    --lighter-background: #181818;
-    --dropdown-hover: #404040;
-    --primary-text: #FFFFFF;
-    --secondary-text:rgb(222, 222, 222);
-    --tertiary-text:rgb(190, 190, 190);
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #121212;
+        --lighter-background: #181818;
+        --dropdown-hover: #404040;
+        --primary-text: #FFFFFF;
+        --secondary-text:rgb(222, 222, 222);
+        --tertiary-text:rgb(190, 190, 190);
 
+        --wip-banner: rgb(180, 20, 20);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #FFFFFF;
+        --lighter-background: rgb(220, 220, 220);
+        --dropdown-hover: #f4f4f4;
+        --primary-text: #121212;
+        --secondary-text:rgb(38, 38, 38);
+        --tertiary-text:rgb(120, 120, 120);
+
+        --wip-banner: rgb(210, 50, 50);
+    }
+}
+
+:root {
     --gradient-blue: #3CB9FC;
     --gradient-pink: #B537F2;
     --gradient-purple: #8A2BE2;
+
+    --link-default: #057698;
+    --link-hover: #04749c;
+    --link-visited: #804181;
+    --link-active: #057698;
 }
 
 @font-face {
@@ -37,8 +61,8 @@ html {
 }
 
 #wip { /* remove once website is complete*/
-    background-color: rgb(180, 20, 20);
-    color: var(--primary-text);
+    background-color: var(--wip-banner);
+    color: white;
     text-align: center;
     padding: 0.002vh 0vw;
 }
@@ -121,7 +145,7 @@ footer {
     background-color: var(--lighter-background);
     color: var(--primary-text);
     font-size: 16px;
-    margin-top: 6vh;
+    margin-top: 15vh;
     padding: 2vh 2vw;
     text-align: center;
 }
@@ -151,8 +175,8 @@ footer #copyright {
 
 /* #region header*/
 #header {
-    margin-top: 2vh;
-    margin-bottom: 12vh;
+    margin-top: 25vh;
+    margin-bottom: 40vh;
     /*display: flex;
     flex-direction: column;*/
 }
@@ -188,16 +212,16 @@ footer #copyright {
 @media (min-width: 568px) {
     .rotatingText-adjective {
         /* for use once the WIP banner is removed
-        top: 220px;*/
-        top: 270px;
+        top: 320px;*/
+        top: 370px;
     } 
 }
 
 @media (max-width: 568px) {
     .rotatingText-adjective {
         /* for use once the WIP banner is removed
-        top: 320px;*/
-        top: 370px;
+        top: 420px;*/
+        top: 490px;
     } 
 }
 
@@ -256,14 +280,14 @@ footer #copyright {
     clear: both;
     margin-left: 20%;
     margin-right: 20%;
-    margin-bottom: 2vw;
+    margin-bottom: 5vw;
 }
 
 .container img {
     aspect-ratio: 1;
     width: 19vw;
     object-fit: cover;
-    border-radius: 2vmin;
+    border-radius: 4vmin;
     float: right;
 }
 
@@ -314,8 +338,20 @@ h1.title {
     font-family: abel-regular, sans-serif;
 }
 
-p a {
-    color: rgb(200, 229, 255);
+p a:link {
+    color: var(--link-default);
+}
+
+p a:hover {
+    color: var(--link-hover);
+}
+
+p a:visited {
+    color: var(--link-visited);
+}
+
+p a:active {
+    color: var(--link-active);
 }
 
 .text-container h3 {
@@ -328,7 +364,11 @@ p a {
     display: flex;
 }
 
-.skills .section {
-    padding-left: 5vw;
+.skills div {
+    min-width: 10vw;
+}
+
+.skills .section{
+    padding-left: 2vw;
 }
 /*  #endregion */
