@@ -1,7 +1,8 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #121212;
-        --lighter-background: #181818;
+        --nav-background: #181818;
+        --nav-text: #FFFFFF;
         --dropdown-hover: #404040;
         --primary-text: #FFFFFF;
         --secondary-text:rgb(222, 222, 222);
@@ -14,7 +15,8 @@
 @media (prefers-color-scheme: light) {
     :root {
         --background: #FFFFFF;
-        --lighter-background: rgb(220, 220, 220);
+        --nav-background: rgb(220, 220, 220);
+        --nav-text: #121212;
         --dropdown-hover: #f4f4f4;
         --primary-text: #121212;
         --secondary-text:rgb(38, 38, 38);
@@ -25,9 +27,13 @@
 }
 
 :root {
-    --gradient-blue: #3CB9FC;
+    /*--gradient-blue: #3CB9FC;
     --gradient-pink: #B537F2;
-    --gradient-purple: #8A2BE2;
+    --gradient-purple: #8A2BE2;*/
+
+    --gradient-blue: #3CB9FC;
+    --gradient-pink: #f237c0;
+    --gradient-purple: #f5a030;
 
     --link-default: #057698;
     --link-hover: #04749c;
@@ -77,7 +83,7 @@ body {
 /* #region nav */
 nav {
     align-items: center;
-    background-color: var(--lighter-background);
+    background-color: var(--nav-background);
     display: flex;
     justify-content: center;
     padding: 2vh 2vw;
@@ -90,7 +96,7 @@ nav img {
 
 nav a {
     padding: 0 1vw;
-    color: var(--primary-text);
+    color: var(--nav-text);
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -114,14 +120,14 @@ nav a:hover {
     display: none;
     font-size: 16px;
     position: absolute;
-    background-color: var(--lighter-background);
+    background-color: var(--nav-background);
     min-width: 3vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: var(--primary-text);
+    color: var(--nav-text);
     padding: 0.1vh 1vw;
     text-decoration: none;
     text-transform: none;
@@ -131,7 +137,7 @@ nav a:hover {
 }
 
 .dropdown-content i {
-    color: var(--primary-text);
+    color: var(--nav-text);
     padding: 2vh 8px 2vh 0px;
 }
 
@@ -142,7 +148,7 @@ nav a:hover {
 
 /* #region footer */
 footer {
-    background-color: var(--lighter-background);
+    background-color: var(--nav-background);
     color: var(--primary-text);
     font-size: 16px;
     margin-top: 15vh;
