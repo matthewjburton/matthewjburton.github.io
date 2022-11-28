@@ -294,88 +294,7 @@ h1.title {
 /* #endregion */
 
 /* #region cards */
-/*.card {
-    box-shadow: 2px .8rem rgba(0, 0, 0, .025);
-}
-
-.card{
-    background-color: var(--section-background);
-    color: var(--primary-text);
-}
-
-.card-publication {
-    position: relative;
-    height: 20rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card-publication img {
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    transform: scale(1);
-    object-fit: contain;
-}
-
-.card-info {
-    position: relative;
-    padding: 2rem 3rem;
-}
-
-.card-title {
-    font-size: 3rem;
-    text-transform: uppercase;
-}
-
-.card a:link {
-    color: var(--link-default);
-    text-decoration: none;
-}
-
-.card a:hover {
-    color: var(--link-hover);
-}
-
-.card a:visited {
-    color: var(--link-visited);
-}
-
-.card a:active {
-    color: var(--link-active);
-}
-
-.card-cta {
-    position: relative;
-    display: inline-block;
-    font-weight: bold;
-    margin-top: 2rem;
-}
-
-.card-cta i {
-    transition: transform .5s;
-}
-
-.card-cta:hover i {
-    transform: translateX(.5rem);
-}
-
-@media screen and (min-width: 37.5rem) {
-    .card {
-        display: grid;
-        grid-auto-flow: column;
-        max-width: 75rem;
-    }
-    
-    .card-publication {
-        width: 25rem;
-        height: initial;
-    }
-}*/
-
-h3 {
+h3 { /* degree in education section */
     color: var(--tertiary-text);
 }
 
@@ -386,12 +305,12 @@ h3 {
     max-width: 75rem
 }
 
-.skills div {
-    min-width: 10rem;
+#skills-title {
+    padding-left: 5rem;
 }
 
-.skills .section{
-    padding-left: 2rem ;
+.skills div {
+    padding-left: 5rem ;
 }
 
 .skills li {
@@ -399,6 +318,12 @@ h3 {
     list-style: none;
 }
 /*  #endregion */
+
+@media screen and (min-width: 568px) and (max-width:1000px) {
+    .card .image img {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 568px) {
     .card:nth-child(even) {
