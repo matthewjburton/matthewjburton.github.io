@@ -38,9 +38,9 @@
     --gradient-pink: 242, 55, 192;
     --gradient-yellow: 245, 160, 48;
 
-    --link-default: #125ab9;
+    --link-default: #1d6ace;
     --link-hover: #04749c;
-    --link-visited: #804181;
+    --link-visited: #b330b5;
     --link-active: #057698;
 }
 
@@ -299,7 +299,6 @@ h3 { /* degree in education section */
 }
 
 .skills {
-    margin-top: 3rem;
     display: grid;
     grid-auto-flow: column;
     max-width: 75rem
@@ -349,6 +348,9 @@ h3 { /* degree in education section */
     .card {
         margin-bottom: 2rem;
     }
+    .card .image {
+        padding: 2rem 0;
+    }
 }
 @media screen and (max-width: 568px) {
     .card {
@@ -390,7 +392,18 @@ h3 { /* degree in education section */
 }
 
 .card .text a:hover {
-    color: var(--link-hover);
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        rgb(var(--gradient-blue)),
+        rgb(var(--gradient-pink)),
+        rgb(var(--gradient-yellow)),
+        rgb(var(--gradient-blue))
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
 
 .card .text a:visited {
