@@ -1,7 +1,8 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #121212;
-        --nav-background: #181818;
+        --section-background: #222222;
+        --nav-shadow: #181818;
         --nav-text: #FFFFFF;
         --dropdown-hover: #404040;
         --primary-text: #FFFFFF;
@@ -15,7 +16,8 @@
 @media (prefers-color-scheme: light) {
     :root {
         --background: #FFFFFF;
-        --nav-background: rgb(220, 220, 220);
+        --section-background: #f1f1f1;
+        --nav-shadow: rgb(220, 220, 220);
         --nav-text: #121212;
         --dropdown-hover: #f4f4f4;
         --primary-text: #121212;
@@ -23,6 +25,7 @@
         --tertiary-text:rgb(120, 120, 120);
 
         --wip-banner: rgb(210, 50, 50);
+
     }
 }
 
@@ -31,11 +34,11 @@
     --gradient-pink: #B537F2;
     --gradient-purple: #8A2BE2;*/
 
-    --gradient-blue: #3CB9FC;
-    --gradient-pink: #f237c0;
-    --gradient-purple: #f5a030;
+    --gradient-blue: 60, 185, 252;
+    --gradient-pink: 242, 55, 192;
+    --gradient-yellow: 245, 160, 48;
 
-    --link-default: #057698;
+    --link-default: #125ab9;
     --link-hover: #04749c;
     --link-visited: #804181;
     --link-active: #057698;
@@ -83,10 +86,18 @@ body {
 /* #region nav */
 nav {
     align-items: center;
-    background-color: var(--nav-background);
+    background-color: var(--background);
     display: flex;
     justify-content: center;
     padding: 2vh 2vw;
+}
+
+.bottom-shadow {
+    box-shadow: 0px 2px 5px var(--nav-shadow);
+}
+
+.top-shadow {
+    box-shadow: 0px -2px 5px var(--nav-shadow);
 }
 
 nav img {
@@ -105,10 +116,10 @@ nav a:hover {
     animation: background-pan 3s linear infinite;
     background: linear-gradient(
         to right,
-        var(--gradient-blue),
-        var(--gradient-pink),
-        var(--gradient-purple),
-        var(--gradient-blue)
+        rgb(var(--gradient-blue)),
+        rgb(var(--gradient-pink)),
+        rgb(var(--gradient-yellow)),
+        rgb(var(--gradient-blue))
     );
     background-size: 200%;
     -webkit-background-clip: text;
@@ -120,7 +131,7 @@ nav a:hover {
     display: none;
     font-size: 16px;
     position: absolute;
-    background-color: var(--nav-background);
+    background-color: var(--background);
     min-width: 3vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -148,11 +159,10 @@ nav a:hover {
 
 /* #region footer */
 footer {
-    background-color: var(--nav-background);
+    background-color: var(--background);
     color: var(--primary-text);
     font-size: 16px;
-    margin-top: 15vh;
-    padding: 2vh 2vw;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -179,12 +189,17 @@ footer #copyright {
 }
 /* #endregion */
 
-/* #region header*/
+/* #region header */
+h1.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: abel-regular, sans-serif;
+}
+
 #header {
     margin-top: 25vh;
     margin-bottom: 40vh;
-    /*display: flex;
-    flex-direction: column;*/
 }
 
 #name{
@@ -278,103 +293,200 @@ footer #copyright {
 
 /* #endregion */
 
-/* #region text and image containers */
+/* #region cards */
+/*.card {
+    box-shadow: 2px .8rem rgba(0, 0, 0, .025);
+}
 
-.container {
+.card{
+    background-color: var(--section-background);
+    color: var(--primary-text);
+}
+
+.card-publication {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
     display: flex;
+    justify-content: center;
     align-items: center;
-    clear: both;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 5vw;
 }
 
-.container img {
-    aspect-ratio: 1;
-    width: 19vw;
-    object-fit: cover;
-    border-radius: 4vmin;
-    float: right;
+.card-publication img {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    transform: scale(1);
+    object-fit: contain;
 }
 
-.container .text-container {
-    display: inline-block;
+.card-info {
+    position: relative;
+    padding: 2rem 3rem;
 }
 
-.container .text-container.right {
-    margin-left: 2vw;
-}
-
-.container .text-container.left {
-    margin-right: 2vw;
-}
-
-.text-container h2 {
+.card-title {
+    font-size: 3rem;
     text-transform: uppercase;
-    font-size: 22px;
-    vertical-align: top;
-    padding-top: 4px;
 }
 
-.text-container p {
-    color: var(--secondary-text);
-    vertical-align: middle;
-}
-
-/*@keyframes enter-upward {
-	0% {
-		transform: translate3d(0, 200px, 0);
-	}
-	50% {
-		transform: translate3d(0, 0px, 0);
-	}
-}
-
-.container-animation {
-    animation: enter-upward 2s 1;
-}*/
-
-/* #endregion */
-
-/* #region other pages */
-h1.title {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 80px;
-    font-family: abel-regular, sans-serif;
-}
-
-p a:link {
+.card a:link {
     color: var(--link-default);
+    text-decoration: none;
 }
 
-p a:hover {
+.card a:hover {
     color: var(--link-hover);
 }
 
-p a:visited {
+.card a:visited {
     color: var(--link-visited);
 }
 
-p a:active {
+.card a:active {
     color: var(--link-active);
 }
 
-.text-container h3 {
-    font-size: 18px;
-    vertical-align: top;
+.card-cta {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.card-cta i {
+    transition: transform .5s;
+}
+
+.card-cta:hover i {
+    transform: translateX(.5rem);
+}
+
+@media screen and (min-width: 37.5rem) {
+    .card {
+        display: grid;
+        grid-auto-flow: column;
+        max-width: 75rem;
+    }
+    
+    .card-publication {
+        width: 25rem;
+        height: initial;
+    }
+}*/
+
+h3 {
     color: var(--tertiary-text);
 }
 
 .skills {
-    display: flex;
+    margin-top: 3rem;
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 75rem
 }
 
 .skills div {
-    min-width: 10vw;
+    min-width: 10rem;
 }
 
 .skills .section{
-    padding-left: 2vw;
+    padding-left: 2rem ;
+}
+
+.skills li {
+    padding-bottom: 1rem;
+    list-style: none;
 }
 /*  #endregion */
+
+@media screen and (min-width: 568px) {
+    .card:nth-child(even) {
+        margin-right: 5rem;
+        border-radius: 0 2rem 2rem 0;
+        flex-direction: row;
+    }
+    .card:nth-child(odd) {
+        margin-left: 5rem;
+        border-radius: 2rem 0 0 2rem;
+        flex-direction: row-reverse;
+    }
+    .card:nth-child(even) .image img {
+        border-radius: 0 2rem 2rem 0;
+        width: 20rem;
+        object-fit: cover;
+    }
+    .card:nth-child(odd) .image img {
+        border-radius: 2rem 0 0 2rem;
+        width: 20rem;
+        object-fit: cover;
+    }
+    .card {
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 568px) {
+    .card {
+        flex-direction: column;
+    }
+    .card .image img {
+        width: 100%;
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    background-color: var(--section-background);
+}
+
+.card .image img {
+    aspect-ratio: 1;
+}
+
+.card .text {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .text .title {
+    text-transform: uppercase;
+    color: var(--primary-text);
+}
+
+.card .text .description {
+    color: var(--secondary-text);
+}
+
+.card .text a {
+    color: var(--link-default);
+    text-decoration: none;
+}
+
+.card .text a:hover {
+    color: var(--link-hover);
+}
+
+.card .text a:visited {
+    color: var(--link-visited);
+}
+
+.card .text a:active {
+    color: var(--link-active);
+}
+
+.card .text .link {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.card .text .link i {
+    transition: transform .5s;
+}
+
+.card .text .link:hover i {
+    transform: translateX(.5rem);
+}

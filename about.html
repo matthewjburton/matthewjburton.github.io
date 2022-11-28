@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <link rel="icon" type="image/x-icon" href="../images/white-favicon.png">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://kit.fontawesome.com/b3382d9189.js" crossorigin="anonymous"></script>
 
@@ -9,7 +9,7 @@
             <p>*Note: this website is in development, some pages are incomplete*</p>
         </div>
 
-        <nav>
+        <nav class="bottom-shadow">
             <a href="index.html">
                 <picture>
                     <source srcset="../images/white-favicon.png"  alt="Logo" media="(prefers-color-scheme: dark)">
@@ -77,64 +77,69 @@
             <h1 class="title">About</h1>
         </div>
 
-        <div class="container" id="anchor-bio">
-            <img src="../images/bio.jpeg" alt="Matthew Burton">
-            <div class="text-container right">
-                <h2>Bio</h2>
-                <p>Hi, I'm Matthew Burton, a developer with a unique blend of left and right brained interests. I enjoy the structure of programs, and the freedom of art. Game development has been an effective outlet for me because it supports my backend interest in programming game mechanics while also polishing my artistic skills through UI, animations, and asset design. Recently, I've branched into web development to continue my pursuit of holistic design practice. I look forward to my future, and hope to have a profound, positive impact on the world.</p>    
+        <article class="card" id="anchor-bio">
+            <div class="card-publication">
+                <img src="../images/bio.jpeg" alt="Matthew Burton">
             </div>
-        </div>
+            <div class="card-info">
+                <h2 class="card-title">Bio</h2>
+                <p class="card-description">
+                    Hi, I'm Matthew Burton, a developer with a unique blend of left and right brained interests. I enjoy the structure of programs, and the freedom of art. Game development has been an effective outlet for me because it supports my backend interest in programming game mechanics while also polishing my artistic skills through UI, animations, and asset design. Recently, I've branched into web development to continue my pursuit of holistic design practice. I look forward to my future, and hope to have a profound, positive impact on the world.
+                </p>
+            </div>
+        </article>
 
-        <div class="container" id="anchor-education">
-            <div class="text-container">
-                <h2>Education</h2>
+        <article class="card" id="anchor-education">
+            <div class="card-info">
+                <h2 class="card-title">Education</h2>
                 <h3>B.S. in Computer Science; Concentration in Cyber Security</h3>
-                <p>My education began traditionally, but as I entered third grade I made the important decision to participate in the <a href="https://mychesterfieldschools.com/gres/instruction/center-based-gifted-cbg/" target="_blank">Central Based Gifted program</a>. This meant that I would attend a different school, for the purpose of accelerating the rate at which I learned. This was a difficult transition, as I had to leave the comfort of my friends to pursue a greater education, but in retrospect this was one of the best decisions I have ever made. In middle school I again opted in for the <a href="https://sites.google.com/ccpsnet.net/mms-cbg/home?pli=1" target="_blank">CBG program</a> surrounding myself with intelligent, driven, and inspiring individuals. When it came time to select my highschool I chose to apply for the specialty center at the <a href="http://mathsci.info/" target="_blank">Mathematics and Science highschool at Clover Hill</a>. Again I was starting over socially, but I had dealt with this challenge twice before, so it was a simple adjustment to acclimate to my new friends. Finally, I enrolled at <a href="https://www.highpoint.edu/computerscience/" target="_blank">High Point University</a>, where for the first time, I opted against their honors program in favor of spending more time engaged with other students and organizations. My journey has been rigorous, but rewarding which fostered my love for learning, and established a disciplined work ethic for delivering high quality solutions. I look forward to completing my B.S. in Computer Science at HPU and hope to continue learning even after graduation.</p>    
+                <p class="card-description">
+                    My education began traditionally, but as I entered third grade I made the important decision to participate in the <a href="https://mychesterfieldschools.com/gres/instruction/center-based-gifted-cbg/" target="_blank">Central Based Gifted program</a>. This meant that I would attend a different school, for the purpose of accelerating the rate at which I learned. This was a difficult transition, as I had to leave the comfort of my friends to pursue a greater education, but in retrospect this was one of the best decisions I have ever made. In middle school I again opted in for the <a href="https://sites.google.com/ccpsnet.net/mms-cbg/home?pli=1" target="_blank">CBG program</a> surrounding myself with intelligent, driven, and inspiring individuals. When it came time to select my highschool I chose to apply for the specialty center at the <a href="http://mathsci.info/" target="_blank">Mathematics and Science highschool at Clover Hill</a>. Again I was starting over socially, but I had dealt with this challenge twice before, so it was a simple adjustment to acclimate to my new friends. Finally, I enrolled at <a href="https://www.highpoint.edu/computerscience/" target="_blank">High Point University</a>, where for the first time, I opted against their honors program in favor of spending more time engaged with other students and organizations. My journey has been rigorous, but rewarding which fostered my love for learning, and established a disciplined work ethic for delivering high quality solutions. I look forward to completing my B.S. in Computer Science at HPU and hope to continue learning even after graduation.
+                </p>
             </div>
-        </div>
+        </article>
 
-
-        <div class="container" id="anchor-skills">
-            <div class="text-container">
+        <article class="card" id="anchor-skills">
+            <div class="card-info">
                 <h2>Skills</h2>
                 <div class="skills">
                     <div>
                         <h3>Programming</h3>
-                        <p><i class="fa-solid fa-check"></i> Python</p>
-                        <p><i class="fa-solid fa-check"></i> C++</p>
-                        <p><i class="fa-solid fa-check"></i> Java</p>
-                        <p><i class="fa-solid fa-check"></i> HTML</p>
-                        <p><i class="fa-solid fa-check"></i> CSS</p>
-                        <p><i class="fa-solid fa-check"></i> MySQL</p>
+                        <li><i class="fa-solid fa-check"></i> Python</li>
+                        <li><i class="fa-solid fa-check"></i> C++</li>
+                        <li><i class="fa-solid fa-check"></i> Java</li>
+                        <li><i class="fa-solid fa-check"></i> HTML</li>
+                        <li><i class="fa-solid fa-check"></i> CSS</li>
+                        <li><i class="fa-solid fa-check"></i> MySQL</li>
                     </div>
-                    <div class="section">
-                        <h3>Game Dvelopement</h3>
-                        <p><i class="fa-solid fa-check"></i> Unity</p>
-                        <p><i class="fa-solid fa-check"></i> C#</p>
-                        <p><i class="fa-solid fa-check"></i> Aseprite</p>
-                        <p><i class="fa-solid fa-check"></i> Xcode</p>
+                    <div>
+                        <h3>Game Developement</h3>
+                        <li><i class="fa-solid fa-check"></i> Unity</li>
+                        <li><i class="fa-solid fa-check"></i> C#</li>
+                        <li><i class="fa-solid fa-check"></i> Aseprite</li>
+                        <li><i class="fa-solid fa-check"></i> Xcode</li>
                     </div>
-                    <div class="section">
+                    <div>
                         <h3>Graphic Design</h3>
-                        <p><i class="fa-solid fa-check"></i> Adobe Illustrator</p>
-                        <p><i class="fa-solid fa-check"></i> Adobe Photoshop</p>
-                        <p><i class="fa-solid fa-check"></i> Adobe Lightroom</p>
-                        <p><i class="fa-solid fa-check"></i> Adobe Premier</p>
-                        <p><i class="fa-solid fa-check"></i> Adobe After Effects</p>
+                        <li><i class="fa-solid fa-check"></i> Adobe Illustrator</li>
+                        <li><i class="fa-solid fa-check"></i> Adobe Photoshop</li>
+                        <li><i class="fa-solid fa-check"></i> Adobe Lightroom</li>
+                        <li><i class="fa-solid fa-check"></i> Adobe Premier</li>
+                        <li><i class="fa-solid fa-check"></i> Adobe After Effects</li>
                     </div>
-                    <div class="section">
+                    <div>
                         <h3>Extras</h3>
-                        <p><i class="fa-solid fa-check"></i> GitHub</p>
-                        <p><i class="fa-solid fa-check"></i> Visual Studio Code</p>
-                        <p><i class="fa-solid fa-check"></i> Microsoft Excel</p>
-                        <p><i class="fa-solid fa-check"></i> Adobe Audition</p>
+                        <li><i class="fa-solid fa-check"></i> GitHub</li>
+                        <li><i class="fa-solid fa-check"></i> Visual Studio Code</li>
+                        <li><i class="fa-solid fa-check"></i> Microsoft Excel</li>
+                        <li><i class="fa-solid fa-check"></i> Adobe Audition</li>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     </body>
 
-    <footer>
+    <footer class="top-shadow">
         <nav>
             <div id="connect">
                 <a href="index.html">
