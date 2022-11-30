@@ -282,26 +282,26 @@ h3 { /* degree in education section */
     html {
         font-size: 20px;
     }
-    .card:nth-child(even) {
+    .card:nth-child(odd) {
         flex-direction: row;
     }
-    .card:nth-child(even) .image img {
+    .card:nth-child(odd) .image img {
         border-radius: 0 1rem 1rem 0;
         width: 20rem;
         object-fit: cover;
     }
-    .card:nth-child(even) .text {
+    .card:nth-child(odd) .text {
         padding-right: 2rem;
     }
-    .card:nth-child(odd) {
+    .card:nth-child(even) {
         flex-direction: row-reverse;
     }
-    .card:nth-child(odd) .image img {
+    .card:nth-child(even) .image img {
         border-radius: 1rem 0 0 1rem;
         width: 20rem;
         object-fit: cover;
     }
-    .card:nth-child(odd) .text {
+    .card:nth-child(even) .text {
         padding-left: 2rem;
     }
     .card {
