@@ -482,3 +482,18 @@ h3 { /* degree in education section */
     font-weight: bold;
     margin-top: 2rem;
 }
+
+.projects {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.projects .title {
+    padding-left: 2rem;    
+}
+
+.projects .content {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
