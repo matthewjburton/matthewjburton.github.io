@@ -497,3 +497,8 @@ h3 { /* degree in education section */
     display: flex;
     justify-content: space-around;
 }
+
+.skills-list {
+    float: left;
+    padding-left: 2rem;
+}
